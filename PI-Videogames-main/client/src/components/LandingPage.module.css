@@ -1,0 +1,14 @@
+
+
+.divLP {
+    background-image: url("../images/fondo.jpg");
+    width: 100vw;
+    height: 90vh;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
