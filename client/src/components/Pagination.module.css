@@ -1,0 +1,22 @@
+
+.button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.eachBtn {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4444d1e7;
+    border-color: rgb(126, 42, 204);
+    background-color: #dedef5;
+    border-width: 3px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.eachBtn:hover {
+    font-size: 18px;
+    background-color: #ffffff;
+}
+

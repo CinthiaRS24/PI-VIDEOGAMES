@@ -1,0 +1,104 @@
+.divTwoColum {
+    display: flex;
+}
+
+.firstColum {
+    width: 18%;
+    position: fixed;
+    margin-top: 58px;
+    background-color: #280783;
+    height: 100%;
+}
+
+.secondColum {
+    width: 80%;
+    padding-top: 55px;
+    padding-left: 246px; 
+}
+
+.title {
+    font-family: 'myFont2';
+    font-size: 30px;
+    color: azure;
+    margin-top: 35px;
+}
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../fontLP/Perfect DOS VGA 437.ttf');
+}
+
+.divCards {
+    display: grid;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    width: 100%;
+    margin-left: 90px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.btn {
+    color: rgb(75, 3, 143);
+    background-color: #dedef5;
+    border-color: rgb(146, 74, 212);
+    border-width: 2px;
+    border-radius: 10%;
+    cursor: pointer;
+    padding-left: 5px;
+    margin-left: 2px;
+    margin-top: 53px;
+    font-family: 'myFont2';
+    font-size: 20px;
+}
+
+.btn:hover {
+    color: rgb(240, 235, 245);
+    background-color: #4444d1e7;
+    border-color: rgb(240, 235, 245);
+}
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../fontLP/Perfect DOS VGA 437.ttf');
+}
+
+.btnLeave {
+    display: flex;
+    color: rgb(75, 3, 143);
+    background-color: #dedef5;
+    border-color: rgb(146, 74, 212);
+    border-width: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding-left: 5px;
+    margin-left: 998px;
+    margin-top: 360px;
+    font-family: 'myFont2';
+    font-size: 25px;
+    position: fixed;
+    padding: 15px;
+}
+
+.btnLeave:hover {
+    font-size: 27px;
+    color: rgb(240, 235, 245);
+    background-color: #4444d1e7;
+    border-color: rgb(240, 235, 245);
+}
+
+
+.home{
+    display: flex;
+}
+
+.loading {
+    color: #fdfdff;
+    font-size: 60px;
+    font-family: 'myFont2';
+    margin-top: 80px;
+    margin-left: 50px;
+}
+

@@ -1,0 +1,24 @@
+.btn {
+    color: rgb(146, 74, 212);
+    background-color: #dedef5;
+    border-color: rgb(146, 74, 212);
+    border-width: 2px;
+    border-radius: 10%;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 16px; 
+    padding-left: 5px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+.btn:hover {
+    color: rgb(240, 235, 245);
+    background-color: #4444d1e7;
+    border-color: rgb(240, 235, 245);
+}
+
+.input {
+    font-size: 14px;
+    border-color: rgb(128, 59, 192);
+}

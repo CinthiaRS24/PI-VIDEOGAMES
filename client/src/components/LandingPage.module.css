@@ -1,0 +1,65 @@
+.divLP {
+  margin: 0;
+  background-image: url("../images/fondo.jpg");
+  width: 100vw;
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+}
+
+.divTextBtn {
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+  padding-left: 190px;
+}
+
+.text {
+  color: rgb(248, 242, 242);
+  font-family: 'myFont';
+  font-size: 60px;
+  margin: 0;
+  padding-bottom: 70px;
+  text-shadow: 0 0 100px rgb(163, 160, 196), 0 0 42px #dedef5, 0 0 82px #f8f9fa;
+}
+
+.btn {
+  font-family: 'myFont2';
+  font-size: 30px;
+  color: rgb(146, 74, 212);
+  background-color: #dedef5;
+  border-color: rgb(146, 74, 212);
+  border-radius: 10%;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.btn:hover {
+  font-size: 33px;
+  color: rgb(240, 235, 245);
+  background-color: #4444d1e7;
+  border-color: rgb(240, 235, 245);
+}
+
+.img {
+  display: flex;
+  width: 245px;
+  height: 245px;
+  margin-top: 200px;
+  padding-left: 195px;
+}
+
+@font-face {
+  font-family: 'myFont';
+  src: url('../fontLP/alagard.ttf');
+}
+
+@font-face {
+  font-family: 'myFont2';
+  src: url('../fontLP/Perfect DOS VGA 437.ttf');
+}

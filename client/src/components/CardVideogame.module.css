@@ -1,0 +1,62 @@
+.div {
+    background-color: #280783;
+    border: 2px solid #ea00ff;
+    border-radius: 5%;
+    width: 260px;
+    height: 315px;
+}
+
+.div:hover {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+    z-index: 1;
+    background-color: #ff00ea;
+    -webkit-box-shadow: 0px 1px 10px 1px #ea00ff;
+            box-shadow: 0px 1px 10px 1px #ea00ff;
+}
+
+.imgs {
+    max-width: 100%;
+    border: 1px solid #ea00ff;
+}
+
+.title {
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.text {
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    color: white;
+    padding-left: 13px;
+    justify-content: start;
+}
+
+.rating {
+    margin-right: 13px;
+    padding: 1.5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+    border-radius: 10%;
+    border: 1px solid #ea00ff;
+    height: 25px;
+}
+
+.afterImg {
+    display: flex;
+    justify-content: space-between;
+}
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../fontLP/Perfect DOS VGA 437.ttf');
+}

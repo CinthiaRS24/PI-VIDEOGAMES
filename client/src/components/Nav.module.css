@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: space-around;
+    background-color: #280783;
+    padding-top: 12px;
+    padding-bottom: 15px;
+}
+
+.text {
+    font-family: 'myFont2';
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(243, 241, 245);
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../fontLP/Perfect DOS VGA 437.ttf');
+    
+  }

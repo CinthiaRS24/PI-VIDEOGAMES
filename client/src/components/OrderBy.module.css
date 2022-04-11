@@ -1,0 +1,40 @@
+.titles {
+    font-family: 'myFont2';
+    font-size: 25px;
+    font-weight: bold;
+    color: azure;
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../fontLP/Perfect DOS VGA 437.ttf');
+}
+
+.subTitles {
+    color: azure;
+    font-weight: bold;
+    text-align: start;
+    padding-right: 10px;
+}
+
+.divName {
+    margin-top: 5px;
+    text-align: start;
+    margin-left: 38px;
+}
+
+.divRating {
+    margin-top: 7px;
+    text-align: start;
+    margin-bottom: 15px;
+    margin-left: 38px;
+}
+
+.selectNR {
+    width: 100px;
+    background-color: #dedef5;
+    border-color: rgb(146, 74, 212);
+    border-width: 2px;
+}
