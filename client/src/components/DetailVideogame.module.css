@@ -2,7 +2,6 @@
     background-color: #280783;
     border: 2px solid #ea00ff;
     border-radius: 5%;
-    width: 80%;
     display: inline-block;
     margin-top: 30px;
 }
@@ -75,6 +74,7 @@ span {
     display: flex;
     flex-direction: column;
     display: inline-block;
+    width: 80%;
 }
 
 .divBack {

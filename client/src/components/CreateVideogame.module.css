@@ -1,0 +1,105 @@
+.divGeneral {
+    display: flex;
+}
+
+.divCreate {
+    margin-top: 105px;
+    background-color: #280783;
+    border: 2px solid #ea00ff;
+    border-radius: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.title {
+    color: rgb(235, 208, 243);
+    font-family: 'myFont2';
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../fontLP/Perfect DOS VGA 437.ttf');
+}
+
+label {
+    color: rgb(235, 208, 243);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+
+.data {
+    display: flex;
+    text-align: start;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.input {
+    background-color: #f0def5;
+    border-color: rgb(146, 74, 212);
+    border-radius: 8%;
+    font-size: 15px;
+    font-family: monospace;
+    width: 190px;
+    
+}
+
+.inputDescription {
+    height: 85px;
+    width: 190px;
+    background-color: #f0def5;
+    border-color: rgb(146, 74, 212);
+    font-size: 15px;
+}
+
+.firstColumn {
+    padding-right: 20px;
+}
+
+.secondColumn {
+    padding-right: 20px;
+}
+
+.divMultiSelect {
+    display: flex;
+    margin-top: 10px;
+}
+
+.multiSelect {
+    color: #f0def5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.btnMultiSelect {
+    height: 20px;
+    margin-left: 5px;
+    background-color: #ea00ff;
+    color: #f0def5;
+    border-color: #f0def5;
+    font-family: monospace;
+}
+
+.btn {
+    color: rgb(240, 235, 245);
+    background-color: #4444d1e7;
+    border-color: rgb(240, 235, 245);
+    border-width: 2px;
+    border-radius: 10%;
+    cursor: pointer;
+    padding-left: 5px;
+    margin-left: 2px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'myFont2';
+    font-size: 30px;
+}
+
+.btn:hover {
+    color: #f0def5;
+    background-color: #ea00ff;
+    border-color: rgb(146, 74, 212);
+}

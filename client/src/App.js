@@ -5,6 +5,7 @@ import LandingPage from './components/LandingPage';
 import Home from './components/Home';
 import CreateVideogame from "./components/CreateVideogame";
 import DetailVideogame from "./components/DetailVideogame";
+import About from "./components/About"
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path='/create'>
           <CreateVideogame />
+        </Route>
+        <Route exact path='/about'>
+          <About />
         </Route>
         <Route exact path='/videogame/:id'>
           <DetailVideogame />
