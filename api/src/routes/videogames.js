@@ -7,23 +7,53 @@ const { API_KEY } = process.env
 // Para traer todos los videojuegos de la API ----------------------------------
 
 const getApiInfo = async function() {
-    
+
     let gamesData = [];
 
     for (let i = 1; i < 6; i++) {
-        let urlData = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}`);
-        urlData.data.results.forEach(v => {
-            gamesData.push({
-                id: v.id,
-                name: v.name,
-                image: v.background_image,
-                rating: v.rating.toFixed(2),
-                genres: v.genres.map(g => g.name)
-            })
-        })
+        gamesData.push(axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}`));
     }
 
-    return gamesData;
+    return Promise.all(gamesData)
+        .then((response) => {
+            let pages = [];
+            for (let i = 0; i < response.length; i++) {
+                pages = [...pages, response[i].data.results];
+            }
+
+            let resultado = [];
+            pages.map(p => {
+                p.forEach(v => {
+                    resultado.push({
+                        id: v.id,
+                        name: v.name,
+                        image: v.background_image,
+                        rating: v.rating.toFixed(2),
+                        genres: v.genres.map(g => g.name)
+                    })
+                })
+            })
+            return resultado;
+        })
+
+    
+    
+    // let gamesData = [];
+
+    // for (let i = 1; i < 6; i++) {
+    //     let urlData = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}`);
+    //     urlData.data.results.forEach(v => {
+    //         gamesData.push({
+    //             id: v.id,
+    //             name: v.name,
+    //             image: v.background_image,
+    //             rating: v.rating.toFixed(2),
+    //             genres: v.genres.map(g => g.name)
+    //         })
+    //     })
+    // }
+
+    // return gamesData;
 }
 
 
@@ -79,7 +109,7 @@ const getApiInfoByName = async function(name) {
                 image: v.background_image,
                 released: v.released,
                 rating: v.rating.toFixed(2),
-                platforms: v.platforms.map(p => p.platform.name),
+                platforms: Array.isArray(v.platforms)?v.platforms.map(p => p.platform.name):"No tiene platflorm",
                 genres: v.genres.map(g => g.name)
             })}
         })

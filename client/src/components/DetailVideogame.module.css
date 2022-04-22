@@ -83,3 +83,11 @@ span {
     margin-top: 18px;
     margin-bottom: 18px;
 }
+
+.loading {
+    color: #fdfdff;
+    font-size: 60px;
+    font-family: 'myFont2';
+    margin-top: 80px;
+    margin-left: 50px;
+}

@@ -114,9 +114,12 @@ export default function Home() {
                             );
                         })}
                     </div> : 
-                        <div className={s.loading}>
-                            Loading ...
+                        <div>
+                           
+                            <img className={s.loading} src="https://img1.picmix.com/output/stamp/normal/8/5/2/9/509258_fb107.gif" width="150px"/>
+
                         </div>}
+                        
                     </div>
                 </div>
 

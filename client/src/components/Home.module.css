@@ -6,7 +6,7 @@
     width: 18%;
     position: fixed;
     margin-top: 58px;
-    background-color: #280783;
+    background-color: #2E0A76;
     height: 100%;
 }
 
@@ -19,7 +19,7 @@
 .title {
     font-family: 'myFont2';
     font-size: 30px;
-    color: azure;
+    color: rgb(220, 212, 245);
     margin-top: 35px;
 }
 
@@ -94,11 +94,11 @@
     display: flex;
 }
 
-.loading {
-    color: #fdfdff;
-    font-size: 60px;
-    font-family: 'myFont2';
-    margin-top: 80px;
-    margin-left: 50px;
-}
 
+.loading {
+    justify-content: center;
+    text-align: center;
+    padding-left: 470px;
+    padding-top: 100px;
+
+}

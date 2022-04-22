@@ -5,6 +5,7 @@ import { postVideogames, getGenres } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
 import Nav from "./Nav";
 import s from "./CreateVideogame.module.css"
+import imgDefault from "../images/imgDefault.png"
 
 export default function CreateVideogame() {
     const dispatch = useDispatch();
@@ -64,6 +65,11 @@ export default function CreateVideogame() {
 
     function handleSubmit(e) {
         e.preventDefault();
+        
+        if (input.image === "") {setInput({
+            ...input,
+            image: {imgDefault}
+        })} 
         console.log(input);
         dispatch(postVideogames(input));
         alert("Personaje Creado")

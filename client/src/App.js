@@ -8,6 +8,7 @@ import DetailVideogame from "./components/DetailVideogame";
 import About from "./components/About"
 
 
+
 function App() {
 
   return (
