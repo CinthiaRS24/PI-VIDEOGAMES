@@ -8,9 +8,7 @@ const { API_KEY } = process.env
 const getApiInfoById = async function(id) {
 
     try {
-
         const urlData = await axios.get(`https://api.rawg.io/api/games/${id}?key=${API_KEY}`);
-        
         const gamesData = {
             id: urlData.data.id,
             name: urlData.data.name,
@@ -30,9 +28,8 @@ const getApiInfoById = async function(id) {
 }
 
 
-const getDbInfoById = async function(id) {
 
-    console.log('idDB', id);
+const getDbInfoById = async function(id) {
 
     try {
         let dbInfo = await Videogame.findOne({
@@ -59,9 +56,8 @@ const getDbInfoById = async function(id) {
 }
 
 
-const getAllVideogamesById = async function(id) {
 
-    console.log(isNaN(id));
+const getAllVideogamesById = async function(id) {
 
     if (isNaN(id)) {
         const dbInfoById = await getDbInfoById(id);
@@ -73,11 +69,12 @@ const getAllVideogamesById = async function(id) {
 }
 
 
-// ---------------------- Nos dirigimos a la ruta videogame/id ------------------------
+
+
+// ---------------------- Ruta para encontrar videojuego por id ------------------------
 
 exports.videoGameByIdRoute = async function(req, res, next) {
     const { id } = req.params;
-    console.log('id', id);
 
     let videogamesById = await getAllVideogamesById(id);
 
@@ -86,8 +83,9 @@ exports.videoGameByIdRoute = async function(req, res, next) {
     } else {
         res.status(404).send("Id not found");
     }
-    
 };
+
+
 
 
 // ---------------------- Ruta para crear un videojuego ----------------------------

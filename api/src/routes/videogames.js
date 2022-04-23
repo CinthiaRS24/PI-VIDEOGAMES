@@ -16,12 +16,14 @@ const getApiInfo = async function() {
 
     return Promise.all(gamesData)
         .then((response) => {
+
             let pages = [];
+            let resultado = [];
+
             for (let i = 0; i < response.length; i++) {
                 pages = [...pages, response[i].data.results];
             }
 
-            let resultado = [];
             pages.map(p => {
                 p.forEach(v => {
                     resultado.push({
@@ -33,33 +35,17 @@ const getApiInfo = async function() {
                     })
                 })
             })
+
             return resultado;
         })
-
-    
-    
-    // let gamesData = [];
-
-    // for (let i = 1; i < 6; i++) {
-    //     let urlData = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}`);
-    //     urlData.data.results.forEach(v => {
-    //         gamesData.push({
-    //             id: v.id,
-    //             name: v.name,
-    //             image: v.background_image,
-    //             rating: v.rating.toFixed(2),
-    //             genres: v.genres.map(g => g.name)
-    //         })
-    //     })
-    // }
-
-    // return gamesData;
 }
+
 
 
 // Para traer todos los videojuegos de DB ----------------------------------
 
 const getDbInfo = async function() {
+
     let dbInfo = await Videogame.findAll({
         include: {
             model: Genre,
@@ -99,9 +85,9 @@ const getApiInfoByName = async function(name) {
     
     let gamesData = [];
 
-        const urlData = await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${API_KEY}`);
-        urlData.data.results.forEach(v => {
-          if(gamesData.length < 15) {
+    const urlData = await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${API_KEY}`);
+    urlData.data.results.forEach(v => {
+        if(gamesData.length < 15) {
             gamesData.push({
                 id: v.id,
                 name: v.name,
@@ -109,12 +95,12 @@ const getApiInfoByName = async function(name) {
                 image: v.background_image,
                 released: v.released,
                 rating: v.rating.toFixed(2),
-                platforms: Array.isArray(v.platforms)?v.platforms.map(p => p.platform.name):"No tiene platflorm",
+                platforms: Array.isArray(v.platforms)?v.platforms.map(p => p.platform.name):"Unspecified platform",
                 genres: v.genres.map(g => g.name)
-            })}
-        })
+        })}
+    })
 
-       return gamesData;
+    return gamesData;
 }
 
 
@@ -143,28 +129,9 @@ const getDbInfoByName = async function(name) {
     });
 }
 
-// const deleteVideogameBd = async function(id) {
-
-//     let videoGames = await Videogame.findAll({
-//         where: {
-//             id: id
-//         },
-//         include: {
-//             model: Genre,
-//             attributes: ['name'],
-//             through: {
-//                 attributes: [],
-//             }
-//         }
-//     });
-
-//     videoGames.destroy();
-// }
-
 
 
 const getAllVideogamesByName = async function(name) {
-
     const dbResults = await getDbInfoByName(name);
     const apiResults = await getApiInfoByName(name);
     const allResults = dbResults.concat(apiResults);
@@ -194,6 +161,7 @@ exports.videoGamesRoute = async function (req, res, next) {
 };
 
 
+
 // ---------------------- Ruta para eliminar un videojuego ----------------------------
 
 exports.deleteVideoGameRoute = async function(req, res, next) {
@@ -208,8 +176,5 @@ exports.deleteVideoGameRoute = async function(req, res, next) {
             res.send("Videogame deleted");
         }
     })
-
-    // deleteVideogameBd(id);
-    // res.status(404).send("Videogame deleted");
 }
     
