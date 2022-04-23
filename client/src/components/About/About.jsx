@@ -1,7 +1,7 @@
-import Nav from "./Nav";
+import Nav from "../Nav/Nav"
 import s from "./About.module.css"
-import linkedin from '../images/linkedin.png';
-import github from '../images/github.png';
+import linkedin from '../../images/linkedin.png';
+import github from '../../images/github.png';
 
 export default function About() {
 

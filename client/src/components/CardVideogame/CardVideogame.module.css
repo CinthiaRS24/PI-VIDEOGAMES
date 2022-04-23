@@ -24,6 +24,8 @@
     font-family: "Roboto",sans-serif;
     font-size: 18px;
     color: white;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bold;
     padding-left: 6px;
     padding-right: 6px;
@@ -58,5 +60,16 @@
 
 @font-face {
     font-family: 'myFont2';
-    src: url('../fontLP/Perfect DOS VGA 437.ttf');
+    src: url('../../fontLP/Perfect DOS VGA 437.ttf');
+}
+
+.btnDelete {
+    background-color: #ea00ff;
+    border-color: #2E0A76;
+    /* border-color: #ea00ff; */
+    width: 20%;
+    height: 28px;
+    color: #2E0A76;
+    font-weight: bold;
+    cursor: pointer;
 }

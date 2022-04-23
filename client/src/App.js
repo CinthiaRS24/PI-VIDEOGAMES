@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import LandingPage from './components/LandingPage';
-import Home from './components/Home';
-import CreateVideogame from "./components/CreateVideogame";
-import DetailVideogame from "./components/DetailVideogame";
-import About from "./components/About"
+import LandingPage from './components/LandingPage/LandingPage';
+import Home from './components/Home/Home';
+import CreateVideogame from "./components/CreateVideogame/CreateVideogame";
+import DetailVideogame from "./components/DetailVideogame/DetailVideogame";
+import About from './components/About/About';
 
 
 

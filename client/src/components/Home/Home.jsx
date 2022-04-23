@@ -1,14 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getVideogames } from "../actions";
-import Nav from "./Nav";
-import CardVideogame from "./CardVideogame";
-import Pagination from "./Pagination";
-import Filters from "./Filters";
-import OrderBy from "./OrderBy";
-import { filterByGenres, filterByCreated } from "../actions";
-import { orderByName, orderByRating } from "../actions";
+import { getVideogames } from "../../actions";
+import Nav from "../Nav/Nav";
+import CardVideogame from "../CardVideogame/CardVideogame";
+import Pagination from "../Pagination/Pagination";
+import Filters from "../Filters/Filters";
+import OrderBy from "../OrderBy/OrderBy";
+import { filterByGenres, filterByCreated } from "../../actions";
+import { orderByName, orderByRating } from "../../actions";
 import { Link } from "react-router-dom";
 import s from "./Home.module.css"
 
@@ -41,11 +41,19 @@ export default function Home() {
 
     function handleClick(e) {
         e.preventDefault();
-        // dispatch(getVideogames());
-        window.location.reload()
+        dispatch(getVideogames());
+        setNamechange("");
+        setRatingchange("");
+        setGenrechange("")
+        setCurrentPage(1);
+        setSource("All");
+        // window.location.reload()
     }
 
 
+    const [namechange, setNamechange] = useState('');
+    const [ratingchange, setRatingchange] = useState('');
+    const [genrechange, setGenrechange] = useState('');
 
     const [order, setOrder] = useState()
 
@@ -53,6 +61,8 @@ export default function Home() {
         e.preventDefault();
         dispatch(filterByGenres(e.target.value));
         setCurrentPage(1);
+        setSource("All");
+        setGenrechange(e.target.value);
         setOrder("Order" + e.target.value)
     }
     
@@ -61,18 +71,23 @@ export default function Home() {
         console.log(e);
         setSource(e);
         setCurrentPage(1);
+        setGenrechange("");
         setOrder("Order" + e)
     }
 
     function handlerByName(e) { //no puedo pasar un estado local a otro componente?
         dispatch(orderByName(e.target.value))
-        setCurrentPage(1)                       // este renglón es para que cada vez que ordene me lleve a la pag1?
+        setCurrentPage(1);
+        setRatingchange("");
+        setNamechange(e.target.value);                       // este renglón es para que cada vez que ordene me lleve a la pag1?
         setOrder("Order" + e.target.value) // para qué es? no veo cambios. supuestamente para renderizar
     }
 
     function handlerByRating(e) { //no puedo pasar un estado local a otro componente?
         dispatch(orderByRating(e.target.value));
-        setCurrentPage(1);                       // este renglón es para que cada vez que ordene me lleve a la pag1?
+        setCurrentPage(1);   
+        setNamechange("");                    // este renglón es para que cada vez que ordene me lleve a la pag1?
+        setRatingchange(e.target.value); 
         setOrder("Order" + e.target.value); // para qué es? no veo cambios. supuestamente para renderizar
     }
 
@@ -87,8 +102,8 @@ export default function Home() {
             <div className={s.divTwoColum}>
                 
                 <div className={s.firstColum}>
-                    <OrderBy handlerByName={handlerByName} handlerByRating={handlerByRating}/>
-                    <Filters handlerGenres={handlerGenres} handlerCreated={handlerCreated} source={source}/>
+                    <OrderBy handlerByName={handlerByName} handlerByRating={handlerByRating} namechange={namechange} ratingchange={ratingchange}/>
+                    <Filters handlerGenres={handlerGenres} handlerCreated={handlerCreated} source={source} genrechange={genrechange}/>
                     <button onClick={e => {handleClick(e)}} className={s.btn}>
                         RESET
                     </button>
@@ -109,7 +124,7 @@ export default function Home() {
                         {currentVideogames.map( el => {
                             return (
                                 <div key={el.id}>
-                                    <CardVideogame name={el.name} genres={el.genres} image = {el.image} rating={el.rating} id={el.id}/>
+                                    <CardVideogame name={el.name} genres={el.genres} image = {el.image} rating={el.rating} id={el.id} createdInDb={el.createdInDb}/>
                                 </div>
                             );
                         })}

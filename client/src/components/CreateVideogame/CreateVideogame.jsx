@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { postVideogames, getGenres } from "../actions";
+import { postVideogames, getGenres } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
-import Nav from "./Nav";
+import Nav from "../Nav/Nav";
 import s from "./CreateVideogame.module.css"
-import imgDefault from "../images/imgDefault.png"
+import imgDefault from "../../images/imgDefault.png"
 
 export default function CreateVideogame() {
     const dispatch = useDispatch();

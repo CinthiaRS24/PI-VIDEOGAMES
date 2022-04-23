@@ -143,6 +143,25 @@ const getDbInfoByName = async function(name) {
     });
 }
 
+// const deleteVideogameBd = async function(id) {
+
+//     let videoGames = await Videogame.findAll({
+//         where: {
+//             id: id
+//         },
+//         include: {
+//             model: Genre,
+//             attributes: ['name'],
+//             through: {
+//                 attributes: [],
+//             }
+//         }
+//     });
+
+//     videoGames.destroy();
+// }
+
+
 
 const getAllVideogamesByName = async function(name) {
 
@@ -156,7 +175,7 @@ const getAllVideogamesByName = async function(name) {
 
 // ---------------------- Para dirigimos a la ruta videogames ya sea con nombre o sin nombre ------------------------
 
-module.exports = async function (req, res, next) {
+exports.videoGamesRoute = async function (req, res, next) {
     const { name } = req.query;
     
     if (name) {
@@ -173,3 +192,24 @@ module.exports = async function (req, res, next) {
         res.status(200).send(videogames);
     }
 };
+
+
+// ---------------------- Ruta para eliminar un videojuego ----------------------------
+
+exports.deleteVideoGameRoute = async function(req, res, next) {
+    const {id} = req.params;
+    
+    Videogame.destroy({
+        where: {
+            id: id
+        }
+    }).then(function(result) {
+        if(result) {
+            res.send("Videogame deleted");
+        }
+    })
+
+    // deleteVideogameBd(id);
+    // res.status(404).send("Videogame deleted");
+}
+    

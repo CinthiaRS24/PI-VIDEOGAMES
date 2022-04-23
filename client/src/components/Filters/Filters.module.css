@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'myFont2';
-    src: url('../fontLP/Perfect DOS VGA 437.ttf');
+    src: url('../../fontLP/Perfect DOS VGA 437.ttf');
 }
 
 .select {
@@ -21,6 +21,7 @@
 
 .btnSelect {
     background-color: #dedef5;
+    cursor: pointer;
 }
 
 .divSource {
@@ -33,4 +34,5 @@
     border-color: rgb(146, 74, 212);
     font-family: serif;
     margin-right: 5px;
+    cursor: pointer;
 }

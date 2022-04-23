@@ -1,6 +1,6 @@
 .divLP {
   margin: 0;
-  background-image: url("../images/fondo10.jpg");
+  background-image: url("../../images/fondo10.jpg");
   width: 100vw;
   height: 100vh;
   -webkit-background-size: cover;
@@ -57,10 +57,10 @@
 
 @font-face {
   font-family: 'myFont';
-  src: url('../fontLP/alagard.ttf');
+  src: url('../../fontLP/alagard.ttf');
 }
 
 @font-face {
   font-family: 'myFont2';
-  src: url('../fontLP/Perfect DOS VGA 437.ttf');
+  src: url('../../fontLP/Perfect\ DOS\ VGA\ 437.ttf');
 }

@@ -50,9 +50,12 @@ function rootReducer (state = initialState, action) {
                 return 0;
             })
 
+            const allVideogames3 = state.allVideogames;
+            const orderName = action.payload === 'asc' ? orderAsc : orderAsc.reverse();
+
             return {
                 ...state,
-                videogames: action.payload === 'asc' ? orderAsc : orderAsc.reverse()
+                videogames: action.payload === '' ? allVideogames3 : orderName
             }
     
         case 'ORDER_BY_RATING':
@@ -81,6 +84,7 @@ function rootReducer (state = initialState, action) {
                 ...state,
                 detail: action.payload
             }
+
 
         default:
             return state;

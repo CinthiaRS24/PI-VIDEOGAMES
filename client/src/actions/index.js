@@ -37,6 +37,15 @@ export function getVideogameById(payload) {
     }
 }
 
+export function clearVideogame() {
+    return function(dispatch) {
+        return dispatch({
+            type: 'GET_ID_VIDEOGAME',
+            payload: []
+        })
+    }
+}
+
 
 export function postVideogames(payload) {
     return function(dispatch) {
@@ -47,6 +56,18 @@ export function postVideogames(payload) {
     }
 }
 
+
+export const deleteVideogame = (id) => {
+    return function(dispatch) {
+        axios.get(`http://localhost:3001/videogames/${id}`)
+            .then(response => {
+                return response
+            })
+    }
+
+
+    
+}
 
 export function getGenres() {
     return function(dispatch) {
