@@ -62,9 +62,9 @@ export default function Detail() {
                 
                 
                 : 
-                <div>
-                    <p className={s.loading}>Loading</p>
-                    <img className={s.loading} src="https://img1.picmix.com/output/stamp/normal/8/5/2/9/509258_fb107.gif" width="150px"/>
+                <div className={s.loading}>
+                    <p>Loading</p>
+                    <img  src="https://i.gifer.com/origin/95/9592fe08911171b05f3c6aac39d0df83_w200.gif" width="280px"/>
                 </div>
                 
             }

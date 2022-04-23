@@ -44,11 +44,11 @@ span {
 
 .btn {
     display: flex;
-    color: rgb(75, 3, 143);
-    background-color: #dedef5;
-    border-color: rgb(146, 74, 212);
+    color: rgb(240, 235, 245);
+    background-color: #280783;
+    border-color: rgb(240, 235, 245);
     border-width: 2px;
-    border-radius: 20%;
+    border-radius: 10%;
     cursor: pointer;
     font-family: 'myFont2';
     font-size: 25px;
@@ -85,8 +85,8 @@ span {
 }
 
 .loading {
-    color: #fdfdff;
-    font-size: 60px;
+    color: #f5f5ff;
+    font-size: 50px;
     font-family: 'myFont2';
     margin-top: 80px;
     margin-left: 50px;
