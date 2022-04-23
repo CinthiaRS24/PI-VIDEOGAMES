@@ -7,6 +7,7 @@ export default function About() {
 
     return(
         <div className={s.divGeneral}>
+            
             <Nav/>
 
             <div className={s.divDetail}>
@@ -34,12 +35,12 @@ export default function About() {
                         <p className={s.textRedes}>LinkedIn</p>
                     </a>
                     
-                    
                     <a target="_blank" rel="noreferrer" href="https://github.com/CinthiaRS24" className={s.redes}>
                         <img className={s.imagenG} src={github} alt="img not found"/>
                         <p className={s.textRedes}>GitHub</p>
                     </a>
                 </div>
+                
             </div>
         </div>
     )

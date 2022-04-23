@@ -25,6 +25,7 @@ export function getVideogamesByName(payload) {
     }
 }
 
+
 export function getVideogameById(payload) {
     return function(dispatch) {
         axios.get(`http://localhost:3001/videogame/${payload}`)
@@ -37,6 +38,7 @@ export function getVideogameById(payload) {
     }
 }
 
+
 export function clearVideogame() {
     return function(dispatch) {
         return dispatch({
@@ -48,7 +50,7 @@ export function clearVideogame() {
 
 
 export function postVideogames(payload) {
-    return function(dispatch) {
+    return function() {
         axios.post("http://localhost:3001/videogames", payload)
             .then(response => {
                 return response
@@ -58,16 +60,14 @@ export function postVideogames(payload) {
 
 
 export const deleteVideogame = (id) => {
-    return function(dispatch) {
+    return function() {
         axios.get(`http://localhost:3001/videogames/${id}`)
             .then(response => {
                 return response
             })
-    }
-
-
-    
+    }  
 }
+
 
 export function getGenres() {
     return function(dispatch) {

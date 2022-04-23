@@ -7,23 +7,6 @@
     margin-bottom: 15px;
 }
 
-@font-face {
-    font-family: 'myFont2';
-    src: url('../../fontLP/Perfect DOS VGA 437.ttf');
-}
-
-.select {
-    width: 180px;
-    background-color: #dedef5;
-    border-color: rgb(146, 74, 212);
-    border-width: 2px;
-}
-
-.btnSelect {
-    background-color: #dedef5;
-    cursor: pointer;
-}
-
 .divSource {
     justify-content: space-around;
 }
@@ -35,4 +18,18 @@
     font-family: serif;
     margin-right: 5px;
     cursor: pointer;
+}
+
+.select {
+    width: 180px;
+    background-color: #dedef5;
+    border-color: rgb(146, 74, 212);
+    border-width: 2px;
+}
+
+
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
 }

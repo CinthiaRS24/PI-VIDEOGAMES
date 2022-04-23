@@ -15,11 +15,6 @@
             box-shadow: 0px 1px 10px 1px #ea00ff;
 }
 
-.imgs {
-    max-width: 100%;
-    border: 1px solid #ea00ff;
-}
-
 .title {
     font-family: "Roboto",sans-serif;
     font-size: 18px;
@@ -31,6 +26,16 @@
     padding-right: 6px;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.imgs {
+    max-width: 100%;
+    border: 1px solid #ea00ff;
+}
+
+.afterImg {
+    display: flex;
+    justify-content: space-between;
 }
 
 .text {
@@ -53,23 +58,20 @@
     height: 25px;
 }
 
-.afterImg {
-    display: flex;
-    justify-content: space-between;
-}
-
-@font-face {
-    font-family: 'myFont2';
-    src: url('../../fontLP/Perfect DOS VGA 437.ttf');
-}
-
 .btnDelete {
     background-color: #ea00ff;
     border-color: #2E0A76;
-    /* border-color: #ea00ff; */
     width: 20%;
     height: 28px;
     color: #2E0A76;
     font-weight: bold;
     cursor: pointer;
 }
+
+
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
+}
+

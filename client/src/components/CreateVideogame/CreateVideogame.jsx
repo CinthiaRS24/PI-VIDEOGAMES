@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { postVideogames, getGenres } from "../../actions";
+import { useHistory } from "react-router-dom";
+import { postVideogames, getGenres } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import Nav from "../Nav/Nav";
 import s from "./CreateVideogame.module.css"
-import imgDefault from "../../images/imgDefault.png"
+import swal from'sweetalert2';
 
 export default function CreateVideogame() {
     const dispatch = useDispatch();
@@ -26,53 +26,51 @@ export default function CreateVideogame() {
         genres: []
     })
 
-
-
-    function handleChange(e) {
+    function handlerChange(e) {
         setInput({
             ...input,
             [e.target.name]: e.target.value
         });
     }
 
-    function handleSelectPlatforms(e) {
+    function handlerSelectPlatforms(e) {
         setInput({
             ...input,
             platforms: input.platforms.includes(e.target.value) ? input.platforms : [...input.platforms, e.target.value]
         });
     }
 
-    function handleDeletePlatforms(el) {
+    function handlerDeletePlatforms(el) {
         setInput({
             ...input,
             platforms: input.platforms.filter(p => p !== el)
         });
     }
 
-    function handleSelectGenres(e) {
+    function handlerSelectGenres(e) {
         setInput({
             ...input,
             genres: input.genres.includes(e.target.value) ? input.genres : [...input.genres, e.target.value]
         });
     }
 
-    function handleDeleteGenres(el) {
+    function handlerDeleteGenres(el) {
         setInput({
             ...input,
             genres: input.genres.filter(g => g !== el)
         });
     }
 
-    function handleSubmit(e) {
+    function handlerSubmit(e) {
         e.preventDefault();
-        
-        if (input.image === "") {setInput({
-            ...input,
-            image: {imgDefault}
-        })} 
-        console.log(input);
+    
         dispatch(postVideogames(input));
-        alert("Personaje Creado")
+        swal.fire(
+            'Good job!',
+            'You created videogame.',
+            'success'
+          )
+
         setInput({
             name: "",
             description: "",
@@ -82,6 +80,7 @@ export default function CreateVideogame() {
             image: "",
             genres: []
         })
+        
         history.push("/home")
     }
 
@@ -90,16 +89,6 @@ export default function CreateVideogame() {
     }, []);
 
 
-
-    // function showCheckboxes(){
-    //     var checkboxes = document.getElementById("checkboxes");
-    //     checkboxes.style.display= "none";
-    //     // if(checkboxes.style.contains("hide")) {
-    //     //     checkboxes.style.remove("hide");
-    //     // } else {
-    //     //     checkboxes.style.add("hide");
-    //     // }
-    // }
 
     return(
         <div className={s.divGeneral}>
@@ -110,7 +99,7 @@ export default function CreateVideogame() {
 
                 <h1 className={s.title}>New Videogame</h1>
 
-                <form  onSubmit={(e) => {handleSubmit(e)}}>
+                <form  onSubmit={(e) => {handlerSubmit(e)}}>
                     <div className={s.data}>
                         <div className={s.firstColumn}>
 
@@ -120,7 +109,7 @@ export default function CreateVideogame() {
                                     type="text"
                                     value={input.name}
                                     name= "name"
-                                    onChange={(e) => handleChange(e)}
+                                    onChange={(e) => handlerChange(e)}
                                     required={true}
                                     placeholder="Videogame"
                                     className={s.input}
@@ -135,7 +124,7 @@ export default function CreateVideogame() {
                                     type="text"
                                     value={input.description}
                                     name= "description"
-                                    onChange={(e) => handleChange(e)}
+                                    onChange={(e) => handlerChange(e)}
                                     required={true}
                                     placeholder="Enter a description"
                                     className={s.inputDescription}
@@ -150,7 +139,7 @@ export default function CreateVideogame() {
                                     type="text"
                                     value={input.image}
                                     name= "image"
-                                    onChange={(e) => handleChange(e)}
+                                    onChange={(e) => handlerChange(e)}
                                     placeholder="Img URL"
                                     className={s.input}
                                 />
@@ -167,15 +156,16 @@ export default function CreateVideogame() {
                                     type="date"
                                     value={input.released}
                                     name= "released"
-                                    onChange={(e) => handleChange(e)}
+                                    onChange={(e) => handlerChange(e)}
                                     className={s.input}
                                 />
                             </div>
+
                             <br></br>
+
                             <div>
                                 <label>Platforms: <br></br></label>
-
-                                <select className={s.input} required={true} onChange={(e) =>{handleSelectPlatforms(e)}}>
+                                <select className={s.input} required={true} onChange={(e) =>{handlerSelectPlatforms(e)}}>
                                     <option value="">Choose 1 or more</option>
                                     {
                                         platformsApi && platformsApi.map((p, index) => (
@@ -183,12 +173,11 @@ export default function CreateVideogame() {
                                         ))
                                     }
                                 </select>
-
                                 {
                                     input.platforms.map((el, index) =>
                                         <div key={index} className={s.divMultiSelect}>
                                             <p className={s.multiSelect}>{el}</p>
-                                            <button className={s.btnMultiSelect} onClick={() => {handleDeletePlatforms(el)}}>X</button>
+                                            <button className={s.btnMultiSelect} onClick={() => {handlerDeletePlatforms(el)}}>X</button>
                                         </div>
                                     )
                                 }
@@ -196,15 +185,15 @@ export default function CreateVideogame() {
 
                         </div>
 
-                        <div>
 
+                        <div>
                             <div>
                                 <label>Rating: <br></br></label>
                                 <input
                                     type="number"
                                     value={input.rating}
                                     name= "rating"
-                                    onChange={(e) => handleChange(e)}
+                                    onChange={(e) => handlerChange(e)}
                                     className={s.input}
                                     step = {0.01}
                                     placeholder= "0.00 - 5.00"
@@ -217,7 +206,7 @@ export default function CreateVideogame() {
 
                             <div>
                                 <label>Genres: <br></br></label>
-                                <select className={s.input} onChange={(e) =>{handleSelectGenres(e)}}>
+                                <select className={s.input} onChange={(e) =>{handlerSelectGenres(e)}}>
                                     <option value="">Choose 1 or more</option>
                                     {
                                         genres && genres.map(g => (
@@ -230,13 +219,11 @@ export default function CreateVideogame() {
                                     input.genres.map((el, index) =>
                                         <div key={index} className={s.divMultiSelect}>
                                             <p className={s.multiSelect}>{el}</p>
-                                            <button className={s.btnMultiSelect} onClick={() => {handleDeleteGenres(el)}}>X</button>
+                                            <button className={s.btnMultiSelect} onClick={() => {handlerDeleteGenres(el)}}>X</button>
                                         </div>
                                     )
                                 }
-
                             </div>
-
                         </div>
                     </div>
 
@@ -244,44 +231,7 @@ export default function CreateVideogame() {
 
                 </form>
 
-
-
             </div>
         </div>
     )
-
 }
-
-//Si quiero usar checkbox:
-{/* <div>
-    <label>Genres:</label>
-    {
-        genres && genres.map(g => (
-            <div key={g.id}>
-                <label>
-                    <input
-                        type="checkbox"
-                        value={g.name}
-                        name= "genre"
-                        onChange={(e) => handleCheckGenres(e)}
-                    />{g.name}
-                </label>
-            </div>
-        ))
-    }
-</div> */}
-
-//Para agregarlo al estado cada vez que se selecciona/desselecciona mediante checkbox:
-// function handleCheckGenres(e) {
-//     if(e.target.checked) {
-//         setInput({
-//             ...input,
-//             genres: [...input.genres, e.target.value]
-//         });
-//     } else {
-//         setInput({
-//             ...input,
-//             genres: input.genres.filter(g => g !== e.target.value)
-//         })
-//     }
-// }

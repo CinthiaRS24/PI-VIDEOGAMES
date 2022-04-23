@@ -2,42 +2,14 @@
     display: flex;
 }
 
+
+
 .firstColum {
     width: 18%;
     position: fixed;
     margin-top: 58px;
     background-color: #2E0A76;
     height: 100%;
-}
-
-.secondColum {
-    width: 80%;
-    padding-top: 55px;
-    padding-left: 246px; 
-}
-
-.title {
-    font-family: 'myFont2';
-    font-size: 30px;
-    color: rgb(220, 212, 245);
-    margin-top: 35px;
-}
-
-@font-face {
-    font-family: 'myFont2';
-    src: url('../../fontLP/Perfect\ DOS\ VGA\ 437.ttf');
-}
-
-.divCards {
-    display: grid;
-    flex-direction: row;
-    justify-content: space-around;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-    width: 100%;
-    margin-left: 90px;
-    margin-bottom: 10px;
-    margin-top: 5px;
 }
 
 .btn {
@@ -60,9 +32,23 @@
     border-color: rgb(240, 235, 245);
 }
 
-@font-face {
+
+
+.secondColum {
+    width: 80%;
+    padding-top: 55px;
+    padding-left: 246px; 
+}
+
+.title {
     font-family: 'myFont2';
-    src: url('../../fontLP/Perfect\ DOS\ VGA\ 437.ttf');
+    font-size: 30px;
+    color: rgb(220, 212, 245);
+    margin-top: 35px;
+}
+
+.home{
+    display: flex;
 }
 
 .btnLeave {
@@ -90,8 +76,16 @@
 }
 
 
-.home{
-    display: flex;
+.divCards {
+    display: grid;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    width: 100%;
+    margin-left: 90px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 
@@ -100,5 +94,12 @@
     text-align: center;
     padding-left: 470px;
     padding-top: 100px;
+}
 
+
+
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
 }

@@ -1,3 +1,10 @@
+.divGeneral {
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    width: 80%;
+}
+
 .div {
     background-color: #280783;
     border: 2px solid #ea00ff;
@@ -8,6 +15,21 @@
 
 .title {
     color: aliceblue;
+}
+
+.hr {
+    background-color: #ea00ff; height: 2px; border: 0;
+}
+
+
+
+.divAllInfo {
+    display: flex;
+}
+
+.divImg {
+    display: flex;
+    align-items: center;
 }
 
 .img {
@@ -24,23 +46,18 @@
     text-align: justify;
 }
 
-.divAllInfo {
-    display: flex;
-}
-
-.divImg {
-    display: flex;
-    align-items: center;
-}
-
 span {
     padding-left: 5px;
 }
 
-.hr {
-    background-color: #ea00ff; height: 2px; border: 0;
-}
 
+
+.divBack {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
 
 .btn {
     display: flex;
@@ -64,25 +81,7 @@ span {
     border-color: rgb(240, 235, 245);
 }
 
-@font-face {
-    font-family: 'myFont2';
-    src: url('../../fontLP/Perfect\ DOS\ VGA\ 437.ttf');
-}
 
-
-.divGeneral {
-    display: flex;
-    flex-direction: column;
-    display: inline-block;
-    width: 80%;
-}
-
-.divBack {
-    display: flex;
-    justify-content: center;
-    margin-top: 18px;
-    margin-bottom: 18px;
-}
 
 .loading {
     color: #f5f5ff;
@@ -91,3 +90,17 @@ span {
     margin-top: 80px;
     margin-left: 50px;
 }
+
+
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
+}
+
+
+
+
+
+
+

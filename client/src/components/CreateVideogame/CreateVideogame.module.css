@@ -8,8 +8,7 @@
     border: 2px solid #ea00ff;
     border-radius: 5%;
     margin-right: auto;
-    margin-left: auto;
-    
+    margin-left: auto; 
 }
 
 .title {
@@ -18,23 +17,21 @@
     font-weight: lighter;
 }
 
-@font-face {
-    font-family: 'myFont2';
-    src: url('../../fontLP/Perfect\ DOS\ VGA\ 437.ttf');
+.data {
+    display: flex;
+    text-align: start;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.firstColumn {
+    padding-right: 20px;
 }
 
 label {
     color: rgb(235, 208, 243);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 18px;
-}
-
-
-.data {
-    display: flex;
-    text-align: start;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .input {
@@ -44,7 +41,6 @@ label {
     font-size: 15px;
     font-family: monospace;
     width: 190px;
-    
 }
 
 .inputDescription {
@@ -53,10 +49,6 @@ label {
     background-color: #f0def5;
     border-color: rgb(146, 74, 212);
     font-size: 15px;
-}
-
-.firstColumn {
-    padding-right: 20px;
 }
 
 .secondColumn {
@@ -102,4 +94,11 @@ label {
     color: #f0def5;
     background-color: #ea00ff;
     border-color: rgb(146, 74, 212);
+}
+
+
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
 }

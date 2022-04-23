@@ -1,17 +1,17 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getGenres, filterByGenres, filterByCreated } from "../../actions";
+import { getGenres } from "../../redux/actions";
 import s from "./Filters.module.css"
 
 export default function Filters({handlerGenres, handlerCreated, source, genrechange}) {
 
-const dispatch = useDispatch();
-const genres = useSelector(state => state.genres);
+    const dispatch = useDispatch();
+    const genres = useSelector(state => state.genres);
 
-useEffect(() => {
-    dispatch(getGenres());
-}, []);
+    useEffect(() => {
+        dispatch(getGenres());
+    }, []);
 
 
     return (
@@ -40,5 +40,4 @@ useEffect(() => {
 
         </div>
     )
-
 }
