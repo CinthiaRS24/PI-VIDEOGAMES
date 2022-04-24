@@ -6,6 +6,7 @@ import { getVideogames } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
 
+
 export default function CardVideogame({name, genres, image, rating, id, createdInDb}) {
 
     let dispatch = useDispatch();
