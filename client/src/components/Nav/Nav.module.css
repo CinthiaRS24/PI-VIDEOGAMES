@@ -20,6 +20,8 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+
+
 @font-face {
     font-family: 'myFont2';
     src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');

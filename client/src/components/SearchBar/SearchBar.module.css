@@ -1,3 +1,8 @@
+.input {
+    font-size: 14px;
+    border-color: rgb(128, 59, 192);
+}
+
 .btn {
     color: rgb(146, 74, 212);
     background-color: #dedef5;
@@ -18,7 +23,3 @@
     border-color: rgb(240, 235, 245);
 }
 
-.input {
-    font-size: 14px;
-    border-color: rgb(128, 59, 192);
-}

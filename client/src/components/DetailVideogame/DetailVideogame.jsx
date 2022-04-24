@@ -15,7 +15,7 @@ export default function Detail() {
     useEffect(() => {
         dispatch(clearVideogame())
         dispatch(getVideogameById(id))
-    }, [dispatch])
+    }, [dispatch, id])
 
 
     return (

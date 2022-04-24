@@ -27,7 +27,7 @@ export default function Home() {
     const [namechange, setNamechange] = useState('');
     const [ratingchange, setRatingchange] = useState('');
     const [genrechange, setGenrechange] = useState('');
-    const [setOrder] = useState()
+    const [, setOrder] = useState()
 
     const pagination = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -36,7 +36,7 @@ export default function Home() {
 
     useEffect(() => {
         dispatch(getVideogames());
-    }, []);
+    }, [dispatch]);
 
 
     function handleClick(e) {

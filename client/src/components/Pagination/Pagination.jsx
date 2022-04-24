@@ -7,7 +7,6 @@ export default function Pagination ({videogamesPerPage, allVideogames, paginatio
 
     for (let i = 0; i < Math.ceil(allVideogames/videogamesPerPage); i++) {
         pageNumbers.push(i + 1);
-        
     }
 
     return (
@@ -22,5 +21,4 @@ export default function Pagination ({videogamesPerPage, allVideogames, paginatio
             </ul>
         </nav>
     )
-
 }

@@ -7,9 +7,10 @@
     margin-bottom: 15px;
 }
 
-@font-face {
-    font-family: 'myFont2';
-    src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
+.divName {
+    margin-top: 5px;
+    text-align: start;
+    margin-left: 38px;
 }
 
 .subTitles {
@@ -19,12 +20,6 @@
     padding-right: 10px;
 }
 
-.divName {
-    margin-top: 5px;
-    text-align: start;
-    margin-left: 38px;
-}
-
 .divRating {
     margin-top: 7px;
     text-align: start;
@@ -32,9 +27,16 @@
     margin-left: 38px;
 }
 
-.selectNR {
+.selects {
     width: 100px;
     background-color: #dedef5;
     border-color: rgb(146, 74, 212);
     border-width: 2px;
+}
+
+
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
 }

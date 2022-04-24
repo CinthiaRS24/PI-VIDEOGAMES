@@ -11,7 +11,7 @@ export default function Filters({handlerGenres, handlerCreated, source, genrecha
 
     useEffect(() => {
         dispatch(getGenres());
-    }, []);
+    }, [dispatch]);
 
 
     return (
