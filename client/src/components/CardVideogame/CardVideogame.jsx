@@ -4,14 +4,51 @@ import s from "./CardVideogame.module.css"
 import { deleteVideogame } from "../../redux/actions";
 import { getVideogames } from "../../redux/actions";
 import { useDispatch } from "react-redux";
+import Swal from "sweetalert2";
 
 export default function CardVideogame({name, genres, image, rating, id, createdInDb}) {
 
     let dispatch = useDispatch();
 
+    // const swalWithBootstrapButtons = Swal.mixin({
+    //     customClass: {
+    //       confirmButton: 'btn btn-success',
+    //       cancelButton: 'btn btn-danger'
+    //     },
+    //     buttonsStyling: false
+    //   })
+      
+
     function handlerClickDelete(id) {
-        dispatch(deleteVideogame(id));
-        dispatch(getVideogames())
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            confirmButtonColor: 'green',
+            cancelButtonText: 'No, cancel!',
+            cancelButtonColor: 'red',
+            reverseButtons: true
+        })
+        .then(result => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Deleted!',
+                    'Your videogame has been deleted.',
+                    'success'
+                )
+                dispatch(deleteVideogame(id));
+                dispatch(getVideogames())
+            } else if (
+              result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire(
+                    'Cancelled',
+                    'Your videogame is safe :)',
+                    'error'
+                )
+            }
+        })
     }
 
 

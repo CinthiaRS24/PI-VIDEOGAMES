@@ -158,6 +158,7 @@ export default function CreateVideogame() {
                                     name= "released"
                                     onChange={(e) => handlerChange(e)}
                                     className={s.input}
+                                    required={true}
                                 />
                             </div>
 
@@ -199,6 +200,7 @@ export default function CreateVideogame() {
                                     placeholder= "0.00 - 5.00"
                                     min= {0.00}
                                     max= {5}
+                                    required={true}
                                 />
                             </div>
 

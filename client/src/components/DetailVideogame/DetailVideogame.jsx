@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { getVideogameById, clearVideogame } from "../../redux/actions";
 import { useParams } from "react-router-dom";
 import s from "./DetailVideogame.module.css"
+import imgDefault from "../../images/imgDefault.png"
 
 
 export default function Detail() {
@@ -30,7 +31,7 @@ export default function Detail() {
 
                         <div className={s.divAllInfo}>
                             <div className={s.divImg}>
-                                <img className={s.img} src={detailVideogame.image} alt="Img not found"/>
+                                <img className={s.img} src={detailVideogame.image? detailVideogame.image : imgDefault } alt="Img not found"/>
                             </div>
                             <div className={s.info}>
                                 <p>{detailVideogame.description}</p>

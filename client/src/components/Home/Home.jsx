@@ -11,6 +11,7 @@ import { filterByGenres, filterByCreated } from "../../redux/actions";
 import { orderByName, orderByRating } from "../../redux/actions";
 import { Link } from "react-router-dom";
 import s from "./Home.module.css"
+import imgDefault from "../../images/imgDefault.png"
 
 
 export default function Home() {
@@ -115,7 +116,7 @@ export default function Home() {
                             {currentVideogames.map( el => {
                                 return (
                                     <div key={el.id}>
-                                        <CardVideogame name={el.name} genres={el.genres} image = {el.image} rating={el.rating} id={el.id} createdInDb={el.createdInDb}/>
+                                        <CardVideogame name={el.name} genres={el.genres} image = {el.image ? el.image : imgDefault} rating={el.rating} id={el.id} createdInDb={el.createdInDb}/>
                                     </div>
                                 );
                             })}
