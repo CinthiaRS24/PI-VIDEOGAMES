@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function getVideogames() {
     return function(dispatch) {
-        axios.get("http://localhost:3001/videogames")
+        axios.get("/videogames")
             .then(response => {
                 return dispatch({
                     type: 'GET_VIDEOGAMES',
@@ -15,7 +15,7 @@ export function getVideogames() {
 
 export function getVideogamesByName(payload) {
     return function(dispatch) {
-        axios.get(`http://localhost:3001/videogames?name=${payload}`)
+        axios.get(`/videogames/${payload}`)
             .then(response => {
                 return dispatch({
                     type: 'GET_NAME_VIDEOGAMES',
@@ -28,7 +28,7 @@ export function getVideogamesByName(payload) {
 
 export function getVideogameById(payload) {
     return function(dispatch) {
-        axios.get(`http://localhost:3001/videogame/${payload}`)
+        axios.get(`/videogames/${payload}`)
             .then(response => {
                 return dispatch({
                     type: 'GET_ID_VIDEOGAME',
@@ -51,7 +51,7 @@ export function clearVideogame() {
 
 export function postVideogames(payload) {
     return function() {
-        axios.post("http://localhost:3001/videogames", payload)
+        axios.post("/videogames", payload)
             .then(response => {
                 return response
             })
@@ -61,7 +61,7 @@ export function postVideogames(payload) {
 
 export const deleteVideogame = (id) => {
     return function() {
-        axios.get(`http://localhost:3001/videogames/${id}`)
+        axios.get(`/videogames/${id}`)
             .then(response => {
                 return response
             })
@@ -71,7 +71,7 @@ export const deleteVideogame = (id) => {
 
 export function getGenres() {
     return function(dispatch) {
-        axios.get("http://localhost:3001/genres")
+        axios.get("/videogames")
             .then(response => {
                 return dispatch({
                     type: 'GET_GENRES',
