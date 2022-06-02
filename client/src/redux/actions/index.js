@@ -15,7 +15,7 @@ export function getVideogames() {
 
 export function getVideogamesByName(payload) {
     return function(dispatch) {
-        axios.get(`/videogames/${payload}`)
+        axios.get(`/videogames?name=${payload}`)
             .then(response => {
                 return dispatch({
                     type: 'GET_NAME_VIDEOGAMES',
@@ -28,7 +28,7 @@ export function getVideogamesByName(payload) {
 
 export function getVideogameById(payload) {
     return function(dispatch) {
-        axios.get(`/videogames/${payload}`)
+        axios.get(`/videogame/${payload}`)
             .then(response => {
                 return dispatch({
                     type: 'GET_ID_VIDEOGAME',
@@ -71,7 +71,7 @@ export const deleteVideogame = (id) => {
 
 export function getGenres() {
     return function(dispatch) {
-        axios.get("/videogames")
+        axios.get("/genres")
             .then(response => {
                 return dispatch({
                     type: 'GET_GENRES',
