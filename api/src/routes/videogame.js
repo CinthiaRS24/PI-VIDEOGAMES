@@ -28,7 +28,6 @@ const getApiInfoById = async function(id) {
 }
 
 
-
 const getDbInfoById = async function(id) {
 
     try {
