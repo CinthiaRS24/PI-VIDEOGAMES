@@ -21,7 +21,7 @@ export default function SearchBar () {
     }
 
     return (
-        <div>
+        <div className={s.formClass}>
             <form onSubmit={(e) => handlerSubmit(e)}>
                 <input
                 type="text"
