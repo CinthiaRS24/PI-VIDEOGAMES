@@ -4,7 +4,7 @@ import s from "./OrderBy.module.css"
 export default function OrderBy({handlerByName, handlerByRating, namechange, ratingchange}) {
 
     return (
-        <div>
+        <div className={s.divSort}>
 
             <p className={s.titles}>SORT BY</p>
 

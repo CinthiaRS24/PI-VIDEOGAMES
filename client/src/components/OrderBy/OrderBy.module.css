@@ -45,11 +45,16 @@
 
 @media screen and (max-width: 700px) {
 
+    .divSort {
+        margin-left: 15px;
+    }
+
     .titles {
         font-size: 18px;
         font-weight: normal;
         margin-top: 15px;
         margin-bottom: 15px;
+        text-align: start;
     }
 
     .subTitles {
@@ -58,16 +63,16 @@
     }
 
     .selects {
-        width: 80px;
+        width: 75px;
         font-size: 11px;
         border-width: 2px;
     }
 
     .divName {
-        margin-left: 33px;
+        margin-left: 0px;
     }
 
     .divRating {
-        margin-left: 33px;
+        margin-left: 0px;
     }
 }

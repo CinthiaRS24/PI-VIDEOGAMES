@@ -40,6 +40,12 @@
     
     .divSourceGenres {
         display: flex;
+        margin-right: 18px;
+    }
+
+    .divSource {
+        margin-right: 10px;
+        margin-left: 5px;
     }
 
     .titles {
@@ -55,7 +61,7 @@
     }
 
     .select {
-        width: 120px;
+        width: 75px;
         font-size: 11px;
         border-width: 2px;
     }

@@ -17,7 +17,7 @@ export default function Filters({handlerGenres, handlerCreated, source, genrecha
     return (
         <div className={s.divSourceGenres}>
 
-            <div>
+            <div className={s.divSource}>
                 <p className={s.titles}>SOURCE</p>
 
                 <div className={s.divSource}>
