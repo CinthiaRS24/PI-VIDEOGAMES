@@ -196,6 +196,7 @@ export default function CreateVideogame() {
                                     name= "rating"
                                     onChange={(e) => handlerChange(e)}
                                     className={s.input}
+                                    id={s.inputRating}
                                     step = {0.01}
                                     placeholder= "0.00 - 5.00"
                                     min= {0.00}
@@ -208,7 +209,7 @@ export default function CreateVideogame() {
 
                             <div>
                                 <label>Genres: <br></br></label>
-                                <select className={s.input} onChange={(e) =>{handlerSelectGenres(e)}}>
+                                <select className={s.selectGenres} onChange={(e) =>{handlerSelectGenres(e)}}>
                                     <option value="">Choose 1 or more</option>
                                     {
                                         genres && genres.map(g => (

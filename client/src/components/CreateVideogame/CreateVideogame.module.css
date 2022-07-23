@@ -51,6 +51,15 @@ label {
     font-size: 15px;
 }
 
+.selectGenres {
+    background-color: #f0def5;
+    border-color: rgb(146, 74, 212);
+    border-radius: 8%;
+    font-size: 15px;
+    font-family: monospace;
+    width: 190px;
+}
+
 .secondColumn {
     padding-right: 20px;
 }
@@ -101,4 +110,63 @@ label {
 @font-face {
     font-family: 'myFont2';
     src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    .divCreate {
+        margin-top: 85px;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+    
+    .title {
+        font-size: 22px;
+    }
+    
+    .data {
+        display: block;
+        padding-left: auto;
+        padding-right: 0px;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+    .input {
+        width: 95%;
+        font-size: 12px;
+    }
+
+    .firstColumn {
+        margin-bottom: 20px;
+    }
+
+    .secondColumn {
+        margin-bottom: 20px;
+    }
+
+    .inputDescription {
+        height: 60px;
+        width: 95%;
+        font-size: 12px;
+    }
+
+    #inputRating {
+        width: 88%;
+    }
+
+    .selectGenres {
+        width: 90%;
+    }
+
+    .btn {
+        margin-top: 35px;
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
 }
