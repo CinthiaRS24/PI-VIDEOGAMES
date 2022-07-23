@@ -23,3 +23,15 @@
     border-color: rgb(240, 235, 245);
 }
 
+@media screen and (max-width: 700px) {
+
+    .input {
+        font-size: 13px;
+        width: 138px;
+    }
+    
+    .btn {
+        font-size: 14px; 
+    }
+
+}

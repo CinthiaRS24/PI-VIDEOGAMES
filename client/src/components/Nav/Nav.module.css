@@ -28,3 +28,19 @@ a:-webkit-any-link {
   }
 
  
+
+@media screen and (max-width: 700px) {
+    .nav {
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+    
+    .text {
+
+        font-weight: normal;
+        font-size: 18px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
