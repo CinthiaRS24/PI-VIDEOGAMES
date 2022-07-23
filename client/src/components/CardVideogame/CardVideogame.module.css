@@ -75,3 +75,13 @@
     src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
 }
 
+
+
+@media screen and (max-width: 700px) {
+    
+    .div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
