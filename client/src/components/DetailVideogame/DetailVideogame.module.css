@@ -118,9 +118,23 @@ span {
     }
 
     p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
+    .div {
+        display: block;
+    }
+
+    .img {
+        width: 280px;
+        height: 180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
 }
 
 
