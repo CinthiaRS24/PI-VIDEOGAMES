@@ -122,7 +122,7 @@ export default function Home() {
                             })}
                         </div> 
                         : 
-                        <div>
+                        <div className={s.divLoading}>
                             <img className={s.loading} src="https://img1.picmix.com/output/stamp/normal/8/5/2/9/509258_fb107.gif" alt="Img not found" width="150px"/>
                         </div>}
                         

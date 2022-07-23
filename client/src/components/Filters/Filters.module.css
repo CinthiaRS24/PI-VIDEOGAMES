@@ -33,3 +33,31 @@
     font-family: 'myFont2';
     src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
 }
+
+
+
+@media screen and (max-width: 700px) {
+    
+    .divSourceGenres {
+        display: flex;
+    }
+
+    .titles {
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .source {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .select {
+        width: 120px;
+        font-size: 11px;
+        border-width: 2px;
+    }
+
+}

@@ -103,3 +103,55 @@
     font-family: 'myFont2';
     src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
 }
+
+
+
+@media screen and (max-width: 700px) {
+
+    .firstColum {
+        width: 100%;
+        position: fixed;
+        margin-top: 55px;
+        height: auto;
+        display: flex;
+    }
+
+    .btn {
+        padding-left: 5px;
+        margin-left: 25px;
+        margin-right: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 16px;
+    }
+
+    .btnLeave:hover {
+        font-size: 18px;
+    }
+
+    .secondColum {
+        width: 100%;
+        padding-top: 190px;
+        padding-left: 0px;
+        margin-right: auto;
+        text-align: center; 
+    }
+    
+    .title {
+        font-size: 20px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .loading {
+        padding-left: 0px;
+        padding-top: 50px;
+        width: 50px;
+    }
+
+    .divLoading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

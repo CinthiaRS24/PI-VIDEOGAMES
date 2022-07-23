@@ -40,3 +40,34 @@
     font-family: 'myFont2';
     src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
 }
+
+
+
+@media screen and (max-width: 700px) {
+
+    .titles {
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .subTitles {
+        font-weight: normal;
+        font-size: 16px;
+    }
+
+    .selects {
+        width: 80px;
+        font-size: 11px;
+        border-width: 2px;
+    }
+
+    .divName {
+        margin-left: 33px;
+    }
+
+    .divRating {
+        margin-left: 33px;
+    }
+}

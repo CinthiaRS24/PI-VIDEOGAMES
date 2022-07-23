@@ -15,28 +15,31 @@ export default function Filters({handlerGenres, handlerCreated, source, genrecha
 
 
     return (
-        <div>
+        <div className={s.divSourceGenres}>
 
-            <p className={s.titles}>SOURCE</p>
+            <div>
+                <p className={s.titles}>SOURCE</p>
 
-            <div className={s.divSource}>
-                <button style={source === "All"? {backgroundColor: "#280783", color: "white", borderColor: "white"} : undefined} className={s.source} onClick={() => handlerCreated('All')} >ALL</button>
-                <button style={source === "Created"? {backgroundColor: "#280783", color: "white", borderColor: "white"} : undefined} className={s.source} onClick={() => handlerCreated('Created')}>CREATED</button>
-                <button style={source === "Api"? {backgroundColor: "#280783", color: "white", borderColor: "white"} : undefined} className={s.source} onClick={() => handlerCreated('Api')}>RAWG</button>
+                <div className={s.divSource}>
+                    <button style={source === "All"? {backgroundColor: "#280783", color: "white", borderColor: "white"} : undefined} className={s.source} onClick={() => handlerCreated('All')} >ALL</button>
+                    <button style={source === "Created"? {backgroundColor: "#280783", color: "white", borderColor: "white"} : undefined} className={s.source} onClick={() => handlerCreated('Created')}>CREATED</button>
+                    <button style={source === "Api"? {backgroundColor: "#280783", color: "white", borderColor: "white"} : undefined} className={s.source} onClick={() => handlerCreated('Api')}>RAWG</button>
+                </div>
             </div>
 
+            <div>
+                <p className={s.titles}>GENRES</p>
 
-            <p className={s.titles}>GENRES</p>
-
-            <select value={genrechange} onChange={(e) => handlerGenres(e)} className={s.select}>
-                <option value=''>--Select--</option>
-                <option value='All'>All</option>
-                {
-                    genres && genres.map(g => (
-                        <option value={g.name} key={g.id}>{g.name}</option>
-                    ))
-                }
-            </select>
+                <select value={genrechange} onChange={(e) => handlerGenres(e)} className={s.select}>
+                    <option value=''>--Select--</option>
+                    <option value='All'>All</option>
+                    {
+                        genres && genres.map(g => (
+                            <option value={g.name} key={g.id}>{g.name}</option>
+                        ))
+                    }
+                </select>
+            </div>
 
         </div>
     )
