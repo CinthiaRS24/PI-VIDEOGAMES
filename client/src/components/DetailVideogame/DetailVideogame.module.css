@@ -100,7 +100,28 @@ span {
 
 
 
+@media screen and (max-width: 700px) {
 
+    .divGeneral {
+        display: flex;
+        flex-direction: column;
+        display: inline-block;
+        width: 90%;
+    }
+
+    .divAllInfo {
+        display: block;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+}
 
 
 
