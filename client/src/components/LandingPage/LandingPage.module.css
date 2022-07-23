@@ -1,7 +1,7 @@
 .divLP {
   margin: 0;
   background-image: url("../../images/fondo10.jpg");
-  width: 100vw;
+  width: 100vh;
   height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -65,4 +65,55 @@
 @font-face {
   font-family: 'myFont2';
   src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
+}
+
+
+
+@media screen and (max-width: 700px) {
+  
+  .divLP {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+  }
+  
+  .divTextBtn {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 18px;
+    margin-right: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .text {
+    font-size: 28px;
+    padding-bottom: 70px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .btn {
+    font-size: 22px;
+    padding: 6px;
+    margin-left: 0px;
+  }
+  
+  .btn:hover {
+    font-size: 25px;
+  }
+  
+  .img {
+    width: 100px;
+    height: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 18px;
+    padding-left: 0px;
+  }
+  
 }
