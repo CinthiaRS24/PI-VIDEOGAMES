@@ -177,8 +177,7 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 - [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
 
 
-#### REVISA EL FUNCIONAMIENTO DE ESTA APP
-https://bit.ly/36MwA50
+## Vistas:
 
 Landing Page:
 ![image](https://user-images.githubusercontent.com/96211574/165105803-cf3de477-7c94-4f45-8ec7-b284674fb66a.png)
@@ -258,3 +257,5 @@ Filtro por origen de los videojuegos (Creados):
 <br>
 ![image](https://user-images.githubusercontent.com/96211574/165109545-cbf368f1-473d-47c6-950e-a1986acd53ad.png)
 
+## Prueba la aplicación:
+https://pi-videogames-wine.vercel.app/
