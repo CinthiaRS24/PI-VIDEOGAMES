@@ -179,82 +179,84 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 
 ## Vistas:
 
-Landing Page:
+- Landing Page:
+
 ![image](https://user-images.githubusercontent.com/96211574/165105803-cf3de477-7c94-4f45-8ec7-b284674fb66a.png)
 
-Home:
+- Home:
+
 ![image](https://user-images.githubusercontent.com/96211574/165106067-75e7f236-8bdc-46ea-adbb-78d81978ea6e.png)
 
-Ingreso a un videojuego específico:
-<br>
+- Ingreso a un videojuego específico:
+
 ![image](https://user-images.githubusercontent.com/96211574/165106312-0f241f45-090f-4bce-90f1-497c95a5da52.png)
 
-Puedo ver información detallada del videojuego seleccionado:
-<br>
+- Puedo ver información detallada del videojuego seleccionado:
+
 ![image](https://user-images.githubusercontent.com/96211574/165107229-8594ae36-6728-4aa6-a2e6-f66ab4b4d199.png)
 
-En Create, creo un videojuego:
-<br>
+- En Create, creo un videojuego:
+
 ![image](https://user-images.githubusercontent.com/96211574/165107299-f97bf218-6ad9-4836-908e-1d3e6d3b1686.png)
 
-Aparece una alerta por crear un videojuego:
-<br>
+- Aparece una alerta por crear un videojuego:
+
 ![image](https://user-images.githubusercontent.com/96211574/165107407-a9e682b9-d420-4627-b818-4eddd7882478.png)
 
-Creé un videojuego:
-<br>
+- Creé un videojuego:
+
 ![image](https://user-images.githubusercontent.com/96211574/165107458-691de50a-9c4d-4685-806c-1b3c72ff07e5.png)
 
-Selecciono el botón de eliminar (x) en un videojuego específico:
-<br>
+- Selecciono el botón de eliminar (x) en un videojuego específico:
+
 ![image](https://user-images.githubusercontent.com/96211574/165107527-5bb1488f-d611-48c2-a31c-57d9116ce508.png)
 
-Aparece una alerta para confirmar si deseamos eliminar dicho videojuego:
-<br>
+- Aparece una alerta para confirmar si deseamos eliminar dicho videojuego:
+
 ![image](https://user-images.githubusercontent.com/96211574/165107582-defec3c5-cc23-45c4-b89d-cbbdc6a18335.png)
 
-Aparece esta alerta cuando confirmo que deseo eliminar un videojuego (deleted):
-<br>
+- Aparece esta alerta cuando confirmo que deseo eliminar un videojuego (deleted):
+
 ![image](https://user-images.githubusercontent.com/96211574/165107636-09f66e40-f664-4014-b6cc-490c23a28fdc.png)
 
-Selecciono el botón de eliminar (x) en un videojuego específico:
-<br>
+- Selecciono el botón de eliminar (x) en un videojuego específico:
+
 ![image](https://user-images.githubusercontent.com/96211574/165107872-91b6258c-6e0e-4e40-ba85-0c26e0f4d5c4.png)
 
-Aparece una alerta para confirmar si deseamos eliminar dicho videojuego:
-<br>
+- Aparece una alerta para confirmar si deseamos eliminar dicho videojuego:
+
 ![image](https://user-images.githubusercontent.com/96211574/165107924-601929a4-d9c7-4d3c-bdfd-d38c835f4ab2.png)
 
-Aparece esta alerta cuando cancelo la acción de eliminar un videojuego (cancelled):
-<br>
+- Aparece esta alerta cuando cancelo la acción de eliminar un videojuego (cancelled):
+
 ![image](https://user-images.githubusercontent.com/96211574/165107988-b85d8a59-775f-428f-a713-1c1cfff657df.png)
 
-Busco videojuegos con el nombre Crash:
-<br>
+- Busco videojuegos con el nombre Crash:
+
 ![image](https://user-images.githubusercontent.com/96211574/165108237-4d82a83b-b8b5-43e2-abd8-765e5682149a.png)
 
-Resultados de la búsqueda:
-<br>
+- Resultados de la búsqueda:
+
 ![image](https://user-images.githubusercontent.com/96211574/165108296-9a4d76d4-2318-4f03-b328-049903431171.png)
 
-Filtro por género (Action) y ordeno por nombre de manera ascendente (A-Z):
-<br>
+- Filtro por género (Action) y ordeno por nombre de manera ascendente (A-Z):
+
 ![image](https://user-images.githubusercontent.com/96211574/165109281-2a49718e-2ebe-44d6-a637-1777f88f0ec3.png)
 
-Filtro por género (Action) y ordeno por nombre de manera descendente (Z-A):
-<br>
+- Filtro por género (Action) y ordeno por nombre de manera descendente (Z-A):
+
 ![image](https://user-images.githubusercontent.com/96211574/165109390-882999e7-e001-485f-9dc1-3c0f375bd0a3.png)
 
-Filtro por género (Action) y ordeno por rating de manera ascendente:
-<br>
+- Filtro por género (Action) y ordeno por rating de manera ascendente:
+
 ![image](https://user-images.githubusercontent.com/96211574/165109453-8aff6d8a-3d38-4227-a025-f30c3f7c5f40.png)
 
-Filtro por género (Action) y ordeno por rating de manera descendente:
-<br>
+- Filtro por género (Action) y ordeno por rating de manera descendente:
+
 ![image](https://user-images.githubusercontent.com/96211574/165109500-a4ca3e3d-6d06-416c-b814-6419a07c2b2d.png)
 
-Filtro por origen de los videojuegos (Creados):
-<br>
+- Filtro por origen de los videojuegos (Creados):
+
 ![image](https://user-images.githubusercontent.com/96211574/165109545-cbf368f1-473d-47c6-950e-a1986acd53ad.png)
 
 ## Prueba la aplicación:
